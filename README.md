@@ -1,4 +1,4 @@
-# React + TypeScript + Vite + firebase
+# React + TypeScript + Vite + Firebase
 
 ## Login page with card design for firebase phone number authentication
 
