@@ -1,27 +1,40 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Login page with card design for firebase phone number authentication
 
-Currently, two official plugins are available:
+The application contains the full structure of a large scalable project. The main content of the application included is logging into the application through mobile phone number firebase authentication. so there are some folders that are empty intended for future use
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Contexts: translator and themes surrounds the application so that the entire application (the available part) can be displayed in Croatian and English. Supported themes are light and dark.
 
-## Expanding the ESLint configuration
+### Keywords:
+* web React application
+* TypeScript
+* Vite
+* Firebase
+* [MUI tel input](https://viclafouch.github.io/mui-tel-input/)
+* [MUI OTP input](https://viclafouch.github.io/mui-otp-input/)
+* React context
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### How to use
+1. git clone https://github.com/GeneralSting/firebase-phone-auth
+2. run terminal command - npm install
+3. run terminal command - npm run dev
+   - Runs the app in the development mode.\
+   - Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+  
+<hr>
 
-- Configure the top-level `parserOptions` property like this:
+<div align="center">
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+#### Login card - front side
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![auth](https://github.com/GeneralSting/firebase-phone-auth/assets/100438690/e06b4d05-8d7f-406b-8d55-d00806c8b6b7)
+
+<br>
+
+#### Login card - back side
+
+![auth-back](https://github.com/GeneralSting/firebase-phone-auth/assets/100438690/c7cdf2fd-d9c0-491f-9192-d9b542f3d651)
+
+
+</div>
