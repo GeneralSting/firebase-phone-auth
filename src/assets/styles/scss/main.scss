@@ -1,0 +1,170 @@
+@import "./variables";
+
+@function getColor($color-name) {
+  @return map-get($app-colors, $color-name);
+}
+
+#header-box {
+  flex-grow: 1;
+  margin-bottom: 32px;
+}
+
+#root {
+  height: 100vh;
+}
+
+#header-language-form {
+  > .css-1tpolxv-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root::before {
+    border-bottom: none !important;
+  }
+
+  > .css-1tpolxv-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root::after {
+    border-bottom: 2px solid getColor(pewterBlue) !important;
+  }
+
+  > .css-1k1plil-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root::before {
+    border-bottom: none !important;
+  }
+
+  > .css-1k1plil-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root::after {
+    border-bottom: 2px solid getColor(tumbleweed) !important;
+  }
+}
+
+.language-selector-box {
+  width: 100%;
+  max-width: 6rem;
+}
+
+#footer-text {
+  margin-top: 32px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.registration-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+// .registration-link-text {
+//   display: inline;
+//   border-bottom: 2px solid #deaa88;
+//   transition: border-color 0.3s, font-style 0.3s, color 0.3s;
+//   font-style: italic;
+// }
+
+// .registration-link-text:hover {
+//   border-bottom-color: #a6c9f1;
+// }
+
+.registration-link-text-light {
+  --line-thicknes: 0.1em;
+
+  color: #0000;
+  padding-bottom: var(--line-thicknes);
+  background: linear-gradient(90deg, getColor(pewterBlue) 50%, #000 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(getColor(pewterBlue) 0 0) 0% 100% / var(--_p, 0%)
+      var(--line-thicknes) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+.registration-link-text-light:hover {
+  --_p: 100%;
+  transform: skewX(-20deg);
+}
+.registration-link-text-light {
+  font-family: system-ui, sans-serif;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.registration-link-text-dark {
+  --line-thicknes: 0.1em;
+
+  color: #0000;
+  padding-bottom: var(--line-thicknes);
+  background: linear-gradient(90deg, getColor(pewterBlue) 50%, #fff 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(getColor(pewterBlue) 0 0) 0% 100% / var(--_p, 0%)
+      var(--line-thicknes) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+
+.registration-link-text-dark:hover {
+  --_p: 100%;
+  transform: skewX(-20deg);
+}
+.registration-link-text-dark {
+  font-family: system-ui, sans-serif;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.flipping-card-container {
+  perspective: 800px;
+}
+
+.flipping-card {
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.front-card,
+.back-card {
+  border-radius: 2rem;
+  box-sizing: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  backface-visibility: hidden;
+}
+
+.front-card {
+  position: relative;
+}
+
+.back-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flipping-card .back-card {
+  transform: rotateY(180deg);
+}
+
+.flipping-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.back-card:has(.arrow-card-back:hover) {
+  pointer-events: all;
+  transform: rotateY(178deg);
+}
+
+.MuiOtpInput-TextField > .MuiInputBase-formControl > input {
+  padding: 16px 0px !important;
+}
+
+#otp-input-grid {
+  max-width: 80%;
+}
+
+@media (max-width: 600px) {
+  #otp-input-grid {
+    max-width: 98%;
+  }
+
+  .MuiOtpInput-Box	{
+    gap: 4px !important;
+  }
+}
